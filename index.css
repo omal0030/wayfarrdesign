@@ -1,0 +1,129 @@
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.container .normal:hover {
+  opacity: 0.5;
+}
+.container .big:hover {
+  opacity: 0.5;
+}
+.container .vertical:hover {
+  opacity: 0.5;
+}
+.container .horizontal:hover {
+  opacity: 0.5;
+}
+
+
+
+
+.container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This was added to keep header from covering photos. Has to be a better way. */
+    margin-top: 14.5em;
+}
+
+html, body {
+    background-color: white;
+    margin: 10px;
+}
+
+
+
+
+h1 {
+  font-family: 'Crushed', cursive;
+  color: #003366;
+}
+
+
+  /* Header */
+
+  .header {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 1.5em;
+    min-height: 4em;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #003366;
+    border-top: 1px solid #003366;
+    background-color: white;
+    margin-bottom: 10rem;
+  }
+
+  .header .top-left {
+    display: inline-flex;
+  }
+
+  .top-left .name {
+    align-self: center;
+    font-size: 1em;
+  }
+
+  .top-left .name a {
+    text-decoration: none;
+  }
+
+  .menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .menu ul li {
+    margin: 1rem;
+    list-style: none;
+  }
+
+  .menu ul img {
+    height: 2.5em;
+  }
+
+  .menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s linear;
+    font-family: 'Raleway', sans-serif;
+    color: #003366;
+  }
+
+  .menu ul li a:hover {
+    text-decoration: underline;
+  }
